@@ -1,0 +1,187 @@
+\documentclass[%
+a4paper,
+%twoside,
+11pt
+]{article}
+
+% encoding, font, language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+
+\usepackage{mathptmx}
+
+\usepackage{lipsum}
+
+\usepackage{nicefrac}
+
+\usepackage[
+%    handwritten,
+    nowarnings,
+    %myconfig
+]
+{xcookybooky}
+
+\usepackage{blindtext}    % only needed for generating test text
+
+\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
+
+
+\setcounter{secnumdepth}{1}
+\renewcommand*{\recipesection}[2][]
+{%
+    \subsection[#1]{#2}
+}
+\renewcommand{\subsectionmark}[1]
+{% no implementation to display the section name instead
+}
+
+
+\usepackage{hyperref}    % must be the last package
+\hypersetup{%
+    pdfauthor            = {Sven Harder},
+    pdftitle             = {Example Recipes for xcookybooky},
+    pdfsubject           = {Recipes},
+    pdfkeywords          = {example, recipes, cookbook, xcookybooky},
+    pdfstartview         = {FitV},
+    pdfview              = {FitH},
+    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
+    bookmarksopen        = {true},
+    pdfpagetransition    = {Glitter},
+    colorlinks           = {true},
+    linkcolor            = {black},
+    urlcolor             = {blue},
+    citecolor            = {black},
+    filecolor            = {black},
+}
+
+\hbadness=10000	% Ignore underfull boxes
+
+\begin{document}
+
+\title{Examples for using \textbf{xcookybooky}}
+\author{Sven Harder\\ \href{mailto:sven\_one1@gmx.de}{sven\_one1@gmx.de}}
+\maketitle
+
+%\begin{abstract}
+%    \noindent The examples in this document require at least version~1.4 of the \texttt{xcookybooky}\footnote{\url{http://www.ctan.org/pkg/xcookybooky}} package. For more examples and test recipes especially for using hook functions take a look at the source files located at \url{https://code.google.com/p/xcookybooky/}. If you are interested in modifying the layout of \texttt{xcookybooky} you will find examples in the documentation as well as in the configuration file \textbf{xcookybooky.cfg}.
+%\end{abstract}
+
+\tableofcontents
+
+\vspace{5em}
+
+\section*{Rezepte}
+\pagebreak
+
+% background graphic
+%\setBackgroundPicture[x, y=-2cm, width=\paperwidth-4cm, height, orientation = pagecenter]
+%{pic/background}
+
+\setHeadlines
+{% translation
+    inghead = Zutaten,
+    prephead = Zubereitung,
+    hinthead = Tipp,
+    continuationhead = Fortsetzung,
+    continuationfoot = Fortsetzung auf n\"achster Seite,
+    portionvalue = Personen,
+}
+
+\begin{recipe}
+[ % Optionale Eingaben
+    preparationtime = {\unit[1]{h}},
+    portion = \portion{5},
+    source = R. Gaus
+]
+{Mousse au Chocolat}
+    
+    %\graph
+    %{% Bilder
+    %    small=pic/glass,    % kleines Bild
+    %    big=pic/ingredients % großes (längeres) Bild
+    %}
+    
+    \ingredients
+    {% Zutaten
+        2 Tafeln & dunkle Schokolade (über \unit[70]{\%})\\
+        3 & Eier\\
+        \unit[200]{ml} & Sahne\\
+        \unit[40]{g} & Zucker\\
+        \unit[50]{g} & Butter
+    }
+    
+    \preparation
+    { % Zubereitung
+        \step Eier trennen, Eiweiß und Sahne separat steif schlagen. Butter und Schokolade vorsichtig im Wasserbad schmelzen.
+        \step Eigelb in einer großen Schüssel mit \unit[2]{EL} heißem Wasser cremig schlagen, den Zucker einrühren bis die Masse hell und cremig ist.
+        \step Die geschmolzene Schokolade unterheben, anschließend sofort Eischnee und Sahne unterheben (nicht mit dem Elektro-Mixer!)
+        \step Mindestens 2 Stunden im Kühlschrank kalt stellen. Aber nicht zu kalt servieren.
+    }
+    
+    \hint
+    {% Tipp
+        Der Schokoladenanteil kann auch gesenkt werden.
+    }
+
+\end{recipe}
+
+% Complete recipe example
+\begin{recipe}
+[% 
+    preparationtime = {\unit[1]{h}},
+    bakingtime={\unit[1]{h}},
+    bakingtemperature={\protect\bakingtemperature{
+        fanoven=\unit[230]{\textcelcius},
+        topbottomheat=\unit[195]{°C},
+        topheat=\unit[195]{°C},
+        gasstove=Level 2}},
+    portion = {\portion{5-6}},
+    %calory={\unit[3]{kJ}},
+    source = {Somebody you used know}
+]
+{Test Recipe}
+    
+    %\graph
+    %{% pictures
+    %    small=pic/glass,     % small picture
+    %    big=pic/ingredients  % big picture
+    %}
+    
+    \introduction{%
+        \lipsum[1]
+    }
+    
+    \ingredients{%
+        2 bar & Dark Chocolate (above \unit[70]{\%})\\
+        3 & Eggs\\
+        \unit[200]{ml} & Cream\\
+        40 g & Sugar\\
+        50 g & Butter
+    }
+    
+    \preparation{%
+        \step \blindtext
+        \step \blindtext
+        \step \blindtext
+    }
+    
+    \suggestion[Variante]
+    {%
+        \blindtext
+    }
+    
+    \suggestion{%
+        \blindtext
+    }
+    
+    \hint{%
+        Enjoy typesetting recipes with {\textbf{\Large\LaTeX}} and {\textbf{\Large xcookybooky!}}
+    }
+    
+\end{recipe}
+
+%\include{tex/Complete_Recipe}
+
+\end{document} 
