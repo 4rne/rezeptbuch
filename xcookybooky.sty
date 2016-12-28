@@ -610,13 +610,24 @@
 \define@key{recipe}{calory}[]{\def\xcb@calory{#1}}
 \define@key{recipe}{source}[]{\def\xcb@source{#1}}
 
+%\newcommand*{\xcb@separationgraph}[2][1.5]
+%{% Graphical separator
+%    \begin{center}
+%        \begin{tikzpicture}[scale=#1]
+%            \fill[color=#2] (0,0) -- (-0.2, 0.1) -- (-4, 0) -- (-0.2, -0.1) -- cycle;
+%            \fill[color=#2] (0,0) -- (0.2, 0.1) -- (4, 0) -- (0.2, -0.1) -- cycle;
+%            \fill[color=#2] (0,0) circle (0.1);
+%        \end{tikzpicture}
+%    \end{center}
+%}
+
 \newcommand*{\xcb@separationgraph}[2][1.5]
 {% Graphical separator
     \begin{center}
         \begin{tikzpicture}[scale=#1]
-            \fill[color=#2] (0,0) -- (-0.2, 0.1) -- (-4, 0) -- (-0.2, -0.1) -- cycle;
-            \fill[color=#2] (0,0) -- (0.2, 0.1) -- (4, 0) -- (0.2, -0.1) -- cycle;
-            \fill[color=#2] (0,0) circle (0.1);
+            \fill[color=#2] (-0.25,-0.0125) -- (-0.25, 0.0125) -- (-4, 0.0125) -- (-4, -0.0125) -- cycle;
+            \fill[color=#2] (0.25,-0.0125) -- (0.25, 0.0125) -- (4, 0.0125) -- (4, -0.0125) -- cycle;
+            \fill[color=#2] (0,0) circle (0.05);
         \end{tikzpicture}
     \end{center}
 }
