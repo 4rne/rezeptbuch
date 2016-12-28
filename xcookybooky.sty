@@ -95,7 +95,7 @@
 \providecolor{DarkBlue}{rgb}{0, 0, 0.7}
 \providecolor{DarkGray}{rgb}{0.23, 0.23, 0.23}
 
-\define@key{colorManagement}{recipename}[DarkBlue]{\def\xcb@color@recipename{#1}}
+\define@key{colorManagement}{recipename}[black]{\def\xcb@color@recipename{#1}}
 \define@key{colorManagement}{intro}[black]{\def\xcb@color@intro{#1}}
 \define@key{colorManagement}{ing}[DarkGray]{\def\xcb@color@ing{#1}}
 \define@key{colorManagement}{inghead}[DarkGray]{\def\xcb@color@inghead{#1}}
@@ -443,8 +443,8 @@
         \pagebreak[1]    % begin here a new page, if the space is small
         \begin{tikzpicture}[line width = 1.5pt, \xcb@color@hintline]
             \useasboundingbox (0,0) -- ++(right:3.5cm) -- ++(up:3mm) -- ++(left:3.5cm) -- cycle;
-            \draw (-3mm, 0mm) -- ++(right:3.5cm);
-            \draw (0, 3mm) -- ++(down:2.4cm);
+            \draw[dashed] (-3mm, 0mm) -- ++(right:3.5cm);
+            \draw[dashed] (0, 3mm) -- ++(down:2.4cm);
         \end{tikzpicture}
 
         \nopagebreak
