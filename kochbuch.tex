@@ -26,7 +26,7 @@ a4paper,
 
 \usepackage{blindtext}    % only needed for generating test text
 
-\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
+\DeclareRobustCommand{\textcelcius}{\ensuremath{^\circ}C}
 
 
 \setcounter{secnumdepth}{1}
@@ -146,7 +146,7 @@ a4paper,
     preparationtime = {\unit[1,5]{h}},
     bakingtime={\unit[35-45]{min}},
     bakingtemperature={\unit[210-230]{\textcelcius}},
-    portion = {\portion{5-6}},
+    portion = {\portion{4}},
     %calory={\unit[3]{kJ}},
  %   source = {Handbuch für das tägliche Backen}
 ]
@@ -189,60 +189,77 @@ a4paper,
     
 \end{recipe}
 
+\pagebreak
+
+\begin{recipe}
+[% 
+    preparationtime = {\unit[30]{min}},
+    portion = {\portion{4}},
+    %calory={\unit[3]{kJ}},
+    source = Heilke
+]
+  {Spinatsuppe}
+
+  %\graph
+  %{% pictures
+  %    small=pic/glass,     % small picture
+  %    big=pic/ingredients  % big picture
+  %}
+
+  \ingredients{%
+    \unit[1]{kg} & Tiefkühl-Spinat \\
+    \unit[200]{g} & Sahne-Schmelzkäse \\
+    1 & Zwiebel, gewürfelt \\
+    & Weizenmehl \\
+    & Margarine \\
+    & Milch \\
+    & Sahne \\
+    & Salz, Pfeffer, Muskat
+  }
+
+  \preparation{%
+    \step Spinat im Topf erhitzen.
+    \step In einem weiteren Topf das Fett zerlassen und die Zwiebel darin bräunen. Mit etwas Mehl eine Mehlschwitze  bereiten und mit etwas Milche auffüllen.
+    \step Den erhitzten Spinat und den Käse dazugeben und mit Gewürzen abschmecken.
+    \step Mehrmals umrühren und aufkochen lassen. Zum Schluss einen Schuss Sahne zugeben.
+  }
+  
+\end{recipe}
+
+% Complete recipe example
 \begin{recipe}
 [% 
     preparationtime = {\unit[1]{h}},
     bakingtime={\unit[1]{h}},
-    bakingtemperature={\protect\bakingtemperature{
-        fanoven=\unit[230]{\textcelcius},
-        topbottomheat=\unit[195]{°C},
-        topheat=\unit[195]{°C},
-        gasstove=Level 2}},
-    portion = {\portion{5-6}},
+    portion = {\portion{4}},
     %calory={\unit[3]{kJ}},
-    source = {Somebody you used know}
+    source = {Opa Norderstedt, Rezept aus Lage}
 ]
-{Spinatsuppe}
+{Pickert}
     
     %\graph
     %{% pictures
     %    small=pic/glass,     % small picture
     %    big=pic/ingredients  % big picture
     %}
-    
-    \introduction{%
-        \lipsum[1]
-    }
-    
     \ingredients{%
-        2 bar & Dark Chocolate (above \unit[70]{\%})\\
-        3 & Eggs\\
-        \unit[200]{ml} & Cream\\
-        40 g & Sugar\\
-        50 g & Butter
+        \unit[1]{kg} & geriebene Kartoffeln \\
+        \unit[1]{kg} & Mehl \\
+        \unit[200]{g} & Hefe \\
+        \unit[125]{g} & Rosinen \\
+        \unit[125-250]{ml} & Milch \\
+        3 - 4 & Eier \\
+        \unit[2]{Stk.} & Palmin \\
+        & etwas Salz und Zucker \\
     }
     
     \preparation{%
-        \step \blindtext
-        \step \blindtext
-        \step \blindtext
-    }
-    
-    \suggestion[Variante]
-    {%
-        \blindtext
-    }
-    
-    \suggestion{%
-        \blindtext
-    }
-    
-    \hint{%
-        Enjoy typesetting recipes with {\textbf{\Large\LaTeX}} and {\textbf{\Large xcookybooky!}}
+      \step Hefestück mit warmer Milch und Zucker ansetzen.
+      \step Inzwischen alles zusammenmengen (möglichst alle Zutaten gut vorwärmen), Hefe dazugeben. Es muss ein dicklicher Teig sein. Diesen \unit[2]{Stunden} an warmer Stelle gehen lassen.
+      \step Die Pfannkuchen (fingerdick) in Backöl oder Palmin langsam in der Pfanne backen.
     }
     
 \end{recipe}
-
 
 
 
@@ -306,10 +323,9 @@ a4paper,
 
 \begin{recipe}
 [% 
-    preparationtime = {\unit[1]{h}},
-    bakingtime={\unit[1]{h}},
-    bakingtemperature={\unit[1234]{°C}},
-    portion = {\portion{5-6}},
+    preparationtime = {\unit[15]{min}},
+    bakingtime={\unit[60-70]{min}},
+    bakingtemperature={\unit[220]{°C}},
     %calory={\unit[3]{kJ}},
     source = Kathrin
 ]
@@ -350,6 +366,70 @@ a4paper,
     
     \hint{%
         Enjoy typesetting recipes with {\textbf{\Large\LaTeX}} and {\textbf{\Large xcookybooky!}}
+    }
+    
+\end{recipe}
+
+
+\begin{recipe}
+[% 
+    preparationtime = {\unit[4]{h}},
+    bakingtime={\unit[15-17]{min}},
+    bakingtemperature={\unit[150]{\textcelcius}},
+    portion = {\portion{4}},
+    %calory={\unit[3]{kJ}},
+    source = {Opa Norderstedt, Rezept aus Lage}
+]
+{Heidesand}
+    
+    %\graph
+    %{% pictures
+    %    small=pic/glass,     % small picture
+    %    big=pic/ingredients  % big picture
+    %}
+    \ingredients{%
+        \unit[250]{g} & Butter \\
+        \unit[250]{g} & Zucker \\
+        \unit[375]{g} & Mehl \\
+        1 & Vanillezucker \\
+        & Prise Salz \\
+    }
+    
+    \preparation{%
+      \step Butter bräunen und abkühlen. Mit Zucker, Salz und Vanillezucker schaumig rühren und \unit[4]{cm} dicke Rollen formen und in Backpapier gerollt einige Stunden kühl legen.
+      \step Von den Rollen \unit[\nicefrac{1}{2}]{cm} dicke Scheiben abschneiden und auf das gefettete Blech legen. 
+    }
+    
+\end{recipe}
+
+\begin{recipe}
+[% 
+    preparationtime = {\unit[\nicefrac{3}{4}]{h}},
+    portion = {\portion{4}},
+    %calory={\unit[3]{kJ}},
+    source = {Opa Norderstedt, Rezept aus Lage}
+]
+{Rumtrüffel (Konfekt)}
+    
+    %\graph
+    %{% pictures
+    %    small=pic/glass,     % small picture
+    %    big=pic/ingredients  % big picture
+    %}
+    \ingredients{%
+        \unit[125]{g} & Zucker \\
+        \unit[125]{g} & Kokosfett \\
+        \unit[70]{g} & gemahlene Mandeln \\
+        3 & gehäufte EL Kakao \\
+        2 & Eier \\
+        & Schokoladenstreusel \\
+        & Schuss Rum oder Rumaroma \\
+    }
+    
+    \preparation{%
+      \step Eier mit Zucker schaumig rühren, Kakao, Kokosfett, Mandeln, Rum(-aroma) dazugeben.
+      \step Kalt stellen.
+      \step Mit einem Löffel Kugeln formen und in Schokoladenstreuseln wälzen.
     }
     
 \end{recipe}
