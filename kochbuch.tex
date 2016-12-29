@@ -9,6 +9,7 @@ a4paper,
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
+\usepackage{wasysym}
 
 %\usepackage{mathptmx}
 \usepackage[sfdefault,light]{roboto}
@@ -92,10 +93,12 @@ a4paper,
 \begin{recipe}
 [ % Optionale Eingaben
     preparationtime = {\unit[1]{h}},
-    portion = \portion{5},
-    source = R. Gaus
+    portion = \portion{4},
+    bakingtime={\unit[30-45]{min}},
+    bakingtemperature={\unit[200-250]{\textcelcius}},
+    source = Antje
 ]
-{Mousse au Chocolat}
+{Kartoffel-Lachs-Auflauf}
     
     %\graph
     %{% Bilder
@@ -105,27 +108,89 @@ a4paper,
     
     \ingredients
     {% Zutaten
-        2 Tafeln & dunkle Schokolade (über \unit[70]{\%})\\
-        3 & Eier\\
-        \unit[200]{ml} & Sahne\\
-        \unit[40]{g} & Zucker\\
-        \unit[50]{g} & Butter
+        \unit[1,5]{kg} & Kartoffeln \\
+	\unit[200]{g} & Lachs \\
+        \unit[200]{ml} & Sahne \\
+        \unit[200]{ml} & Milch \\
+        2 & Eier \\
+        1 & Bund Dill \\
+	& Pfeffer, Salz \\
+        1 & Zitrone (optional)\\
     }
     
     \preparation
     { % Zubereitung
-        \step Eier trennen, Eiweiß und Sahne separat steif schlagen. Butter und Schokolade vorsichtig im Wasserbad schmelzen.
-        \step Eigelb in einer großen Schüssel mit \unit[2]{EL} heißem Wasser cremig schlagen, den Zucker einrühren bis die Masse hell und cremig ist.
-        \step Die geschmolzene Schokolade unterheben, anschließend sofort Eischnee und Sahne unterheben (nicht mit dem Elektro-Mixer!)
-        \step Mindestens 2 Stunden im Kühlschrank kalt stellen. Aber nicht zu kalt servieren.
+	\step Backofen vorheizen
+        \step Pellkartoffeln kochen, pellen, in Scheiben schneiden. Lachs in Streifen schneiden.
+        \step Kartoffeln und Lachs dachziegelartig in eine gefettete Auflaufform legen.
+        \step Soße aus Sahne, Milch, Eiern, Dill, Salz und Peffer darübergeben.
+        \step Eine Dreiviertelstunde bei 200°-250°C backen.
+    }
+    
+        \suggestion[Variante: Nudel-Lachs-Auflauf]
+    {%
+        Statt Kartoffeln 500g gekochte Nudeln verwenden und eine halbe Stunde backen.
     }
     
     \hint
     {% Tipp
-        Der Schokoladenanteil kann auch gesenkt werden.
+      Mit Salat servieren
     }
 
 \end{recipe}
+
+\pagebreak
+
+\begin{recipe}
+[% 
+    preparationtime = {\unit[1,5]{h}},
+    bakingtime={\unit[35-45]{min}},
+    bakingtemperature={\unit[210-230]{\textcelcius}},
+    portion = {\portion{5-6}},
+    %calory={\unit[3]{kJ}},
+ %   source = {Handbuch für das tägliche Backen}
+]
+{Quiche lorraine}
+    
+    %\graph
+    %{% pictures
+    %    small=pic/glass,     % small picture
+    %    big=pic/ingredients  % big picture
+    %}
+    
+    \ingredients{%
+        \unit[200]{g} & Mehl \\
+        \unit[150]{g} & Butter \\
+        \unit[\nicefrac{1}{2}]{TL} & Salz \\
+        \unit[3-4]{EL} & Wasser \\
+        \multicolumn{2}{l}{\textbf{Belag:}} \\
+        \unit[150]{g} & gekochter Schinken \\
+        \unit[150]{g} & Emmentaler oder Gouda \\
+        4 & Eier \\
+        \unit[125]{ml} & saure Sahne \\
+        \unit[\nicefrac{1}{2}]{TL} & Paprikapulver \\
+        & etwas Petersilie \\
+    }
+    
+    \preparation{%
+        \step Das Mehl in eine Schüssel geben, das Wasser mit etwas Mehl verrühren. 
+        Salz zufügen und die Buttern in Flöckchen darauf verteilen. 
+        Alles zu einem glatten Teig verkneten und 1 Stunde ruhen lassen. 
+        \step Den Teig ausrollen und in eine gefettete Springform (\unit[24-26]{cm} \diameter) geben; einen \unit[3]{cm} hohen Rand andrücken. 
+        Die Sahne mit den Eiern verquirlen und den feingewürfelten Schinken und Käse mit Paprika und gehackter Petersilie unterrühren. 
+        Die Masse auf den Teigboden verteilen.
+        \step 35-45 Minuten backen.
+    }
+    
+%    \hint{%
+%        Enjoy typesetting recipes with {\textbf{\Large\LaTeX}} and {\textbf{\Large xcookybooky!}}
+%    }
+    
+\end{recipe}
+
+
+
+
 
 % Complete recipe example
 \begin{recipe}
