@@ -5,3 +5,6 @@
 -hack-nudelauflauf
 -käsestangen
 -geburtstagskuchen
+-tomatensuppe
+-cheeseburgersuppe
+-kartoffelsuppe
