@@ -9,6 +9,12 @@ a4paper,
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\numberwithin{page}{section}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thepage}{\thesection~ - \arabic{page}}
+
 \usepackage{wasysym}
 
 %\usepackage{mathptmx}
@@ -76,6 +82,7 @@ a4paper,
 % ===========================================================================================================================
 
 \section{Kochen}
+\setcounter{page}{1}
 \pagebreak
 
 % background graphic
@@ -264,8 +271,9 @@ a4paper,
 \end{recipe}
 
 % ============================================================================================================================
-
+\pagebreak
 \section{Backen}
+\setcounter{page}{1}
 
 \begin{recipe}
 [% 
@@ -302,10 +310,10 @@ a4paper,
     
 \end{recipe}
 
-
+\pagebreak
 \begin{recipe}
 [% 
-    preparationtime = {\unit[45]{min}},
+    preparationtime = {\unit[60]{min}},
     bakingtime={\unit[15]{min}},
     bakingtemperature={\unit[200]{°C}},
     source = {Angepasstes Rezept nach \url{www.hamburg.de/franzbroetchen}}
@@ -319,45 +327,41 @@ a4paper,
     %}
     
     \ingredients{%
-        2 bar & Dark Chocolate (above \unit[70]{\%})\\
-        3 & Eggs\\
-        \unit[200]{ml} & Cream\\
-        40 g & Sugar\\
-        50 g & Butter
+        \unit[500]{g} & Mehl \\
+        \unit[70]{g} & Zucker \\
+        \unit[70]{g} & weiche Butter \\
+        \unit[250]{ml} & lauwarme Milch \\
+        & Würfel Hefe \\
+	& Prise Salz \\
+        \multicolumn{2}{l}{\textbf{Füllung:}} \\
+        \unit[200]{g} & kalte Butter \\
+        \unit[4-5]{TL} & Zimt \\
+        \unit[250-300]{g} & Zucker \\
     }
     
     \preparation{%
-        Teig
-	500 g Mehl
-	40 g Hefe
-	70 g Zucker
-	250 ml lauwarme Milch
-	70 g Butter
-	1 Prise Salz
-
-	Füllung
-	100 g kalte Butter
-	100 g Zucker
-	1,5 TL Zimt
-	Zubereitung
-
-
-	Hefeteig herstellen und auf einer bemehlten Arbeitsfläche zu einem Rechteck ausrollen (ca. 30 x 25 cm). Butter in dünne Scheiben schneiden und auf eine Teighälfte legen, die andere Hälfte darüber klappen. Teigränder zusammendrücken, Ränder unter den Teig schieben. Teig auf ca. 50 x 30 cm ausrollen. Ein Drittel des Teiges von der Schmalseite zur Mitte hin einschlagen, das restliche Drittel darüber schlagen, so dass drei Schichten übereinander liegen. Teig 10 Minuten kühl stellen.
-
-	Teig auf ca. 80 x 40 cm ausrollen, mit Wasser bestreichen. Zimt und Zucker vermischen und gleichmäßig auf den Teig streuen. Von der Längsseite her aufrollen, leicht andrücken. Rolle in ca. 4 cm breite Stücke schneiden. Mit genügend Abstand auf ein Backblech setzen und mit dem Stiel eines Kochlöffels in der Mitte flach drücken. Den Backofen auf 200°C vorheizen.
-
-	Die Franzbrötchen abgedeckt 15 Minuten gehen lassen.
-	Im vorgeheizten Backofen ca. 25 Minuten backen.
+	\step Aus den Zutaten für den Teig einen Hefeteig herstellen, gut durchkneten und auf einer bemehlten Arbeitsfläche zu einem Rechteck ausrollen (ca. 30 x 25 cm). 
+	
+	\step \unit[100]{g} der kalten Butter in dünne Scheiben schneiden und auf eine Teighälfte legen, die andere Teighälfte darüber klappen und dabei achtgeben, dass sich keine Blasen unter dem Teig bilden. 
+	Dann die Teigränder zusammendrücken, Ränder unter den Teig schieben. Den Teig auf ca. 50 x 30 cm ausrollen. 
+	Ein Drittel des Teiges von links zur Mitte hin einschlagen, das restliche Drittel von rechts darüber schlagen, sodass drei Schichten Teig übereinander liegen. 
+	Auch hier ist darauf zu achten, dass keine Luftblasen im Teig entstehen.
+	
+	\step Den Teig 20 Minuten kühl stellen. währenddessen die Füllung Zimt und Zucker mit der inzwischen in einem Topf geschmolzenen Butter verrühren. 
+	
+	\step Den kalten Teig auf ca. 80 x 40 cm ausrollen. Die Füllung bis auf zwei Esslöffel gleichmäßig auf den unteren zwei Dritteln des Teiges verteilen. 
+	Von unten her vorsichtig den Teig von der Arbeitsfläche lösen und aufrollen, leicht andrücken. 
+	\step Die Rolle in ca. 4 cm breite Stücke schneiden und die Franzbrötchen in einem Abstand von mindestens \unit[10]{cm} auf ein Backblech legen.
+	Dort mit dem Stiel eines Kochlöffels in der Mitte fast ganz durchdrücken, sodass der Teig sich über dem Stiel zusammenwölbt und die Füllung und der Teig aus der Mitter herausquillt.
+	Mit der übrigen Füllung nun die Franzbrötchen bestreichen.
+	
+	\step Den Backofen auf 200°C vorheizen und die Franzbrötchen abgedeckt mindestens 20 Minuten gehen lassen.
+	\step Im vorgeheizten Backofen bei Umluft ca. 15 Minuten backen, bis die typische Bräune erreicht ist.
     }
-    
-    \suggestion[Variante]
-    {%
-        Mit Marzipan!
-    }
-
-    \hint{%
-        Warm genießen.
-    }
+   
+%    \hint{%
+%        Warm genießen.
+%    }
     
 \end{recipe}
 
