@@ -51,9 +51,9 @@ a4paper,
 \usepackage{hyperref}    % must be the last package
 \hypersetup{%
     pdfauthor            = {Arne},
-    pdftitle             = {Rezeptsammlung},
-    pdfsubject           = {Recipes},
-    pdfkeywords          = {example, recipes, cookbook, xcookybooky},
+    pdftitle             = {Arnes Rezeptsammlung},
+    pdfsubject           = {Kochen und Backen},
+    %pdfkeywords          = {example, recipes, cookbook, xcookybooky},
     pdfstartview         = {FitV},
     pdfview              = {FitH},
     pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
@@ -95,8 +95,9 @@ a4paper,
     prephead = Zubereitung,
     hinthead = Tipp,
     continuationhead = Fortsetzung,
-    continuationfoot = Fortsetzung auf n\"achster Seite,
+    continuationfoot = Fortsetzung auf der nächsten Seite,
     portionvalue = Personen,
+    piecesvalue = Stück
 }
 
 \begin{recipe}
@@ -132,13 +133,13 @@ a4paper,
 	\step Backofen vorheizen
         \step Pellkartoffeln kochen, pellen, in Scheiben schneiden. Lachs in Streifen schneiden.
         \step Kartoffeln und Lachs dachziegelartig in eine gefettete Auflaufform legen.
-        \step Soße aus Sahne, Milch, Eiern, Dill, Salz und Pfeffer darübergeben.
+        \step Sauce aus Sahne, Milch, Eiern, Dill, Salz und Pfeffer darübergeben.
         \step Eine Dreiviertelstunde bei 200°-250°C backen.
     }
     
         \suggestion[Variante: Nudel-Lachs-Auflauf]
     {%
-        Statt Kartoffeln 500g gekochte Nudeln verwenden und eine halbe Stunde backen.
+        Statt Kartoffeln 500g gekochte Nudeln verwenden und nur eine halbe Stunde backen, dafür die Sauce mit Milch verlängern.
     }
     
     \hint
@@ -316,7 +317,8 @@ a4paper,
     preparationtime = {\unit[60]{min}},
     bakingtime={\unit[15]{min}},
     bakingtemperature={\unit[200]{°C}},
-    source = {Angepasstes Rezept nach \url{www.hamburg.de/franzbroetchen}}
+    portion = {\pieces{12}},
+    source = {Verbessertes Rezept nach \url{www.hamburg.de/franzbroetchen}}
 ]
 {Hamburger Franzbrötchen}
     
@@ -333,7 +335,7 @@ a4paper,
         \unit[250]{ml} & lauwarme Milch \\
         & Würfel Hefe \\
 	& Prise Salz \\
-        \multicolumn{2}{l}{\textbf{Füllung:}} \\
+        \multicolumn{2}{l}{\textbf{Füllung}} \\
         \unit[200]{g} & kalte Butter \\
         \unit[4-5]{TL} & Zimt \\
         \unit[250-300]{g} & Zucker \\

@@ -226,6 +226,7 @@
 \define@key{headlines}{bakingtemperature}[\Thermo{4}]{\def\xcb@name@bakingtemperature{#1}}
 \define@key{headlines}{portion}[\fontsize{14.5pt}{10pt}\Dish]{\def\xcb@name@portion{#1}}
 \define@key{headlines}{portionvalue}[Portions]{\def\xcb@name@portionvalue{#1}}
+\define@key{headlines}{piecesvalue}[Portions]{\def\xcb@name@piecesvalue{#1}}
 \define@key{headlines}{calory}[Calorific value]{\def\xcb@name@calory{#1}}
 \define@key{headlines}{source}[\PaperPortrait]{\def\xcb@name@source{#1}}
 \savekeys{headlines}
@@ -240,6 +241,7 @@
     bakingtemperature,
     portion,
     portionvalue,
+    piecesvalue,
     calory,
     source
 }
@@ -475,6 +477,12 @@
 }
 
 \newcommand*{\portion}[2][\xcb@name@portionvalue]
+{%
+    \unit[#2]{#1}
+}
+
+
+\newcommand*{\pieces}[2][\xcb@name@piecesvalue]
 {%
     \unit[#2]{#1}
 }
