@@ -1,11 +1,11 @@
--apfelmus
--kartoffelgratin
--überbackene gurken
--nudelauflauf
--hack-nudelauflauf
--käsestangen
--geburtstagskuchen
--tomatensuppe
--cheeseburgersuppe
--kartoffelsuppe
--schinken-erbsen-sahne-soße
+-apfelmus papa
+-kartoffelgratin ck
+-überbackene gurken ck
+-nudelauflauf mama
+-hack-nudelauflauf ck
+-käsestangen ck
+-geburtstagskuchen mama
+-tomatensuppe mama
+-cheeseburgersuppe mama
+-kartoffelsuppe mama
+-schinken-erbsen-sahne-soße mama
