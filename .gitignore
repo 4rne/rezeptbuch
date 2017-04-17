@@ -4,4 +4,4 @@
 *.aux
 *.log
 *.dvi
-
+*.tex.backup
