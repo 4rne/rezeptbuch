@@ -1,3 +1,3 @@
-# rezeptbuch.tex
-eine ganz simple rezeptsammlung erstellt mit latex.
-[download kochbuch.pdf](https://github.com/4rne/rezeptbuch/blob/master/kochbuch.pdf)
+# Rezeptbuch.tex
+Eine ganz simple Rezeptsammlung erstellt mit LaTeX.
+[Download kochbuch.pdf](https://github.com/4rne/rezeptbuch/blob/master/kochbuch.pdf)
